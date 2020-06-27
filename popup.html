@@ -40,5 +40,11 @@ h1 {
 	</body>
 	<script>
 var buttons = document.getElementsByTagName("button");
-var button = buttons.
+for (var i = 0; i < buttons.length; i++) {
+	buttons[i].addEventListener("click", changeSkin);
+};
+function changeSkin() {
+	window.alert("woot");
+};
+	</script>
 </html>
