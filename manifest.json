@@ -1,14 +1,18 @@
 {
 	"manifest_version": 2,
-	"name": "Wikipedia Skinner",
+	"name": "Wikiskin",
 	"version": "1.0",
-	"description": "Choose a Wikipedia project skin without logging in!",
+	"description": "Choose a Wikipedia skin without logging in!",
 	"icons": {
-		"48": "icons/wikiskin-48.png"
+		"48": "icons/wikiskin-48.png",
 		"96": "icons/wikiskin-96.png"
 	},
 	"browser_action": {
-		"default_popup": "popup.html"
+		"default_popup": "popup.html",
+		"default_icon": {
+			"48": "icons/wikiskin-48.png"
+		},
+		"default_title": "Wikiskin"
 	},
 	"content_scripts": [{
 		"matches": ["*://*.wikipedia.org/*"],
