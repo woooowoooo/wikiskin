@@ -24,27 +24,5 @@
 		<p>** Default on (and optimized for) mobile devices.</p>
 		<p class="centered">Created by woooowoooo. <a href="https://github.com/woooowoooo">Github</a></p>
 	</body>
-	<script>
-var buttons = document.getElementsByTagName("button");
-for (var i = 0; i < buttons.length; i++) {
-	buttons[i].addEventListener("click", changeSkin);
-};
-function changeSkin() {
-	window.alert("woot");
-};
-var enable = document.getElementById("enable");
-enable.addEventListener("click", toggleEnable);
-var enabled = document.getElementById("enabled");
-var disabled = document.getElementById("disabled");
-function toggleEnable() {
-	console.log("Toggled!");
-	if (enable.checked == false) {
-		disabled.classList.remove("hidden");
-		enabled.classList.add("hidden");
-	} else {
-		disabled.classList.add("hidden");
-		enabled.classList.remove("hidden");
-	}
-}
-	</script>
+	<script src="popup.js"></script>
 </html>
