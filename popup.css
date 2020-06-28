@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: white;
+	width: 420px;
+	height: 350px;
+	padding: 0px 10px;
+	font-family: Century Gothic, AppleGothic, sans-serif;
+}
+button {
+	background-color: gainsboro;
+	width: 120px;
+	height: 40px;
+	border-width: 0px;
+	border-radius: 5px;
+	margin: 10px 5px;
+	font-family: Century Gothic, AppleGothic, sans-serif;
+}
+h1, h2, p {
+	text-align: center;
+}
+h1 {
+	font-size: 1.5em;
+}
+h2 {
+	font-size: 1em;
+}
+p.left {
+	text-align: left;
+}
+/*Switch*/
+.switch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.switch input {
+	display: none;
+}
+.slider {
+	background-color: gainsboro;
+	width: 48px;
+	height: 24px;
+	padding: 3px;
+	border: none;
+	border-radius: 12px;
+	margin: 12px;
+	transition-duration: .5s;
+	cursor: pointer;
+}
+.slider:before {
+	content: "";
+	display: inline-block;
+	background-color: white;
+	width: 18px;
+	height: 18px;
+	border-radius: 9px;
+	transition-duration: .5s;
+}
+input:checked + .slider {
+	background-color: orangered;
+}
+input:checked + .slider:before {
+	transform: translateX(24px);
+}
