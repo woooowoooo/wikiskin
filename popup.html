@@ -22,7 +22,7 @@ button {
 	margin: 10px 5px;
 	font-family: Century Gothic, AppleGothic, sans-serif;
 }
-h1, h2 {
+h1, h2, p {
 	text-align: center;
 }
 h1 {
@@ -30,6 +30,44 @@ h1 {
 }
 h2 {
 	font-size: 1em;
+}
+p.left {
+	text-align: left;
+}
+/*Switch*/
+.switch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.switch input {
+	display: none;
+}
+.slider {
+	background-color: gainsboro;
+	width: 48px;
+	height: 24px;
+	padding: 3px;
+	border: none;
+	border-radius: 12px;
+	margin: 12px;
+	transition-duration: .5s;
+	cursor: pointer;
+}
+.slider:before {
+	content: "";
+	display: inline-block;
+	background-color: white;
+	width: 18px;
+	height: 18px;
+	border-radius: 9px;
+	transition-duration: .5s;
+}
+input:checked + .slider {
+	background-color: orangered;
+}
+input:checked + .slider:before {
+	transform: translateX(24px);
 }
 		</style>
 	</head>
@@ -41,9 +79,14 @@ h2 {
 		<button id="mn">Minerva Neue**</button>
 		<button id="mb">Monobook</button>
 		<button id="md">Modern</button>
-		<button id="cb">Cologne Blue</button>
-		<p>* Default on personal computers.</p>
-		<p>** Default on (and optimized for) mobile devices.</p>
+		<button id="cb">Cologne Blue</button><br>
+		<label for="enable" class="switch">
+			<input type="checkbox" id="enable" checked>
+			<span class="slider"></span>
+			<span>Enable</span>
+		</label>
+		<p class="left">* Default on personal computers.</p>
+		<p class="left">** Default on (and optimized for) mobile devices.</p>
 		<p>Created by woooowoooo. <a href="https://github.com/woooowoooo">Github</a></p>
 	</body>
 	<script>
