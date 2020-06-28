@@ -4,7 +4,7 @@
 body {
 	background-color: white;
 	width: 420px;
-	height: 350px;
+	height: 340px;
 	padding: 0px 10px;
 	font-family: Century Gothic, AppleGothic, sans-serif;
 }
@@ -12,22 +12,20 @@ button {
 	background-color: gainsboro;
 	width: 120px;
 	height: 40px;
-	border-width: 0px;
+	border: none;
 	border-radius: 5px;
 	margin: 10px 5px;
 	font-family: Century Gothic, AppleGothic, sans-serif;
 }
-h1, h2, p {
-	text-align: center;
-}
 h1 {
+	text-align: center;
 	font-size: 1.5em;
 }
-h2 {
-	font-size: 1em;
+p {
+	margin: 0.5em 0em;
 }
-p.left {
-	text-align: left;
+p.centered {
+	text-align: center;
 }
 /*Switch*/
 .switch {
@@ -63,4 +61,10 @@ input:checked + .slider {
 }
 input:checked + .slider:before {
 	transform: translateX(24px);
+}
+#enabled, #disabled {
+	width: 100px;
+}
+.hidden {
+	display: none;
 }

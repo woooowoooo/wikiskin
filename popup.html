@@ -1,12 +1,13 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 	<head>
 		<title>Wikipedia Skinner</title>
+		<meta charset="UTF-8">
 		<link rel="stylesheet" href="popup.css">
 	</head>
 	<body>
 		<h1>Click a button to change skins!</h1>
-		<h2>This extension only works on wikipedia pages.</h2>
+		<p class="centered">This extension only works on wikipedia pages.</p>
 		<button id="vr">Vector*</button>
 		<button id="tl">Timeless</button>
 		<button id="mn">Minerva Neue**</button>
@@ -16,11 +17,12 @@
 		<label for="enable" class="switch">
 			<input type="checkbox" id="enable" checked>
 			<span class="slider"></span>
-			<span>Enable</span>
+			<p id="enabled">Enabled</p>
+			<p id="disabled" class="hidden">Disabled</p>
 		</label>
-		<p class="left">* Default on personal computers.</p>
-		<p class="left">** Default on (and optimized for) mobile devices.</p>
-		<p>Created by woooowoooo. <a href="https://github.com/woooowoooo">Github</a></p>
+		<p>* Default on personal computers.</p>
+		<p>** Default on (and optimized for) mobile devices.</p>
+		<p class="centered">Created by woooowoooo. <a href="https://github.com/woooowoooo">Github</a></p>
 	</body>
 	<script>
 var buttons = document.getElementsByTagName("button");
@@ -30,5 +32,19 @@ for (var i = 0; i < buttons.length; i++) {
 function changeSkin() {
 	window.alert("woot");
 };
+var enable = document.getElementById("enable");
+enable.addEventListener("click", toggleEnable);
+var enabled = document.getElementById("enabled");
+var disabled = document.getElementById("disabled");
+function toggleEnable() {
+	console.log("Toggled!");
+	if (enable.checked == false) {
+		disabled.classList.remove("hidden");
+		enabled.classList.add("hidden");
+	} else {
+		disabled.classList.add("hidden");
+		enabled.classList.remove("hidden");
+	}
+}
 	</script>
 </html>
