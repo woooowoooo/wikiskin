@@ -1,14 +1,15 @@
-var buttons = document.getElementsByTagName("button");
-for (var i = 0; i < buttons.length; i++) {
+let buttons = document.getElementsByTagName("button");
+let skinNames = ["vector", "timeless", "", "monobook", "modern", "cologneblue"];
+for (let i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener("click", changeSkin);
 };
 function changeSkin() {
-	
+	localStorage.setItem("useskin", skinNames[i]);
 };
-var enable = document.getElementById("enable");
+let enable = document.getElementById("enable");
 enable.addEventListener("click", toggleEnable);
-var enabled = document.getElementById("enabled");
-var disabled = document.getElementById("disabled");
+let enabled = document.getElementById("enabled");
+let disabled = document.getElementById("disabled");
 function toggleEnable() {
 	if (enable.checked == false) {
 		disabled.classList.remove("hidden");
