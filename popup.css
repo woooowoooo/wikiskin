@@ -17,6 +17,10 @@ button {
 	margin: 10px 5px;
 	font-family: Century Gothic, AppleGothic, sans-serif;
 }
+.selected {
+	background-color: orangered;
+	color: white;
+}
 h1 {
 	text-align: center;
 	font-size: 1.5em;
