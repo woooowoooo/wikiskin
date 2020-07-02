@@ -20,12 +20,19 @@ function changeSkin() {
 let enable = document.getElementById("enable");
 let enabled = document.getElementById("enabled");
 let disabled = document.getElementById("disabled");
+if (!localStorage.getItem("enabled")) {
+	enable.checked = false;
+	disabled.classList.add("hidden");
+	enabled.classList.remove("hidden");
+}
 enable.addEventListener("click", toggleEnable);
 function toggleEnable() {
-	if (enable.checked == false) {
+	if (localStorage.getItem("enabled")) {
+		localStorage.setItem("enabled", false);
 		disabled.classList.remove("hidden");
 		enabled.classList.add("hidden");
 	} else {
+		localStorage.setItem("enabled", true);
 		disabled.classList.add("hidden");
 		enabled.classList.remove("hidden");
 	}
