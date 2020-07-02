@@ -1,5 +1,6 @@
 let buttons = document.getElementsByTagName("button");
-let skinNames = ["vector", "timeless", "", "monobook", "modern", "cologneblue"];
+let skinNames = ["vector", "timeless", "mobile", "monobook", "modern", "cologneblue"];
+let channel = new BroadcastChannel("test");
 for (let i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener("click", changeSkin);
 	if (localStorage.getItem("useskin") == buttons[i].name) {
@@ -15,6 +16,7 @@ function changeSkin() {
 		buttons[i].classList.remove("selected");
 	}
 	this.classList.add("selected");
+	channel.postMessage(localStorage);
 };
 //Switch
 let enable = document.getElementById("enable");
@@ -36,4 +38,5 @@ function toggleEnable() {
 		disabled.classList.add("hidden");
 		enabled.classList.remove("hidden");
 	}
+	channel.postMessage(localStorage);
 }
