@@ -3,19 +3,26 @@
 }
 body {
 	background-color: white;
-	width: 420px;
-	height: 340px;
-	padding: 0px 10px;
+	width: 500px;
+	height: 360px;
+	padding: 0 10px;
 	font-family: Century Gothic, AppleGothic, sans-serif;
 }
+#buttons {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
 button {
-	background-color: gainsboro;
-	width: 120px;
-	height: 40px;
+	background-color: lightgray;
+	width: 9em;
+	padding: 0.75em;
 	border: none;
 	border-radius: 5px;
-	margin: 10px 5px;
-	font-family: Century Gothic, AppleGothic, sans-serif;
+	margin: 0.5em 0.2em;
+	font: 1em Century Gothic, AppleGothic, sans-serif;
+	transition-duration: 50ms;
+	cursor: pointer;
 }
 .selected {
 	background-color: orangered;
@@ -26,12 +33,15 @@ h1 {
 	font-size: 1.5em;
 }
 p {
-	margin: 0.5em 0em;
+	margin: 0.5em 0;
 }
-p.centered {
+body > p:last-of-type {
+	margin-top: 1em;
+}
+.centered {
 	text-align: center;
 }
-/*Switch*/
+/* Switch */
 .switch {
 	display: flex;
 	justify-content: center;
@@ -41,14 +51,14 @@ p.centered {
 	display: none;
 }
 .slider {
-	background-color: gainsboro;
+	background-color: lightgray;
 	width: 48px;
 	height: 24px;
 	padding: 3px;
 	border: none;
 	border-radius: 12px;
 	margin: 12px;
-	transition-duration: .5s;
+	transition-duration: 0.5s;
 	cursor: pointer;
 }
 .slider:before {
@@ -58,7 +68,7 @@ p.centered {
 	width: 18px;
 	height: 18px;
 	border-radius: 9px;
-	transition-duration: .5s;
+	transition-duration: 0.5s;
 }
 input:checked + .slider {
 	background-color: orangered;
