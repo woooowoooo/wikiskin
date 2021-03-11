@@ -1,42 +1,46 @@
 let buttons = document.getElementsByTagName("button");
-let skinNames = ["vector", "timeless", "mobile", "monobook", "modern", "cologneblue"];
-let channel = new BroadcastChannel("test");
-for (let i = 0; i < buttons.length; i++) {
-	buttons[i].addEventListener("click", changeSkin);
-	if (localStorage.getItem("useskin") == buttons[i].name) {
-		buttons[i].classList.add("selected");
-	} else {
-		buttons[i].classList.remove("selected");
+let skinNames = {
+	vr: "vector",
+	tl: "timeless",
+	mn: "mobile",
+	mb: "monobook",
+	md: "modern",
+	cb: "cologneblue"
+};
+let channel = new BroadcastChannel("debug");
+for (let button of buttons) {
+	button.name = skinNames[button.id];
+	button.addEventListener("click", changeSkin);
+	if (localStorage.getItem("useskin") == button.name) {
+		button.classList.add("selected");
 	}
-	buttons[i].name = skinNames[i];
 };
 function changeSkin() {
 	localStorage.setItem("useskin", this.name);
-	for (let i = 0; i < buttons.length; i++) {
-		buttons[i].classList.remove("selected");
+	for (let button of buttons) {
+		button.classList.remove("selected");
 	}
 	this.classList.add("selected");
-	channel.postMessage(localStorage);
-};
-//Switch
+	channel.postMessage("Skin " + this.name);
+}
+// Switch
 let enable = document.getElementById("enable");
 let enabled = document.getElementById("enabled");
 let disabled = document.getElementById("disabled");
-if (!localStorage.getItem("enabled")) {
+if (localStorage.getItem("enabled") == "false") {
 	enable.checked = false;
-	disabled.classList.add("hidden");
-	enabled.classList.remove("hidden");
+	enabled.classList.add("hidden");
+	disabled.classList.remove("hidden");
 }
-enable.addEventListener("click", toggleEnable);
-function toggleEnable() {
-	if (localStorage.getItem("enabled")) {
-		localStorage.setItem("enabled", false);
-		disabled.classList.remove("hidden");
+enable.addEventListener("click", function () {
+	if (localStorage.getItem("enabled") != "false") {
+		localStorage.setItem("enabled", "false");
 		enabled.classList.add("hidden");
+		disabled.classList.remove("hidden");
 	} else {
-		localStorage.setItem("enabled", true);
-		disabled.classList.add("hidden");
+		localStorage.setItem("enabled", "true");
 		enabled.classList.remove("hidden");
+		disabled.classList.add("hidden");
 	}
-	channel.postMessage(localStorage);
-}
+	channel.postMessage("Toggle");
+});
