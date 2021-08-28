@@ -7,7 +7,11 @@ let skinNames = {
 	md: "modern",
 	cb: "cologneblue"
 };
-let channel = new BroadcastChannel("debug");
+let port;
+browser.runtime.onConnect.addListener(function (p) {
+	port = p;
+	console.log("Port made");
+});
 for (let button of buttons) {
 	button.name = skinNames[button.id];
 	button.addEventListener("click", changeSkin);
@@ -21,7 +25,7 @@ function changeSkin() {
 		button.classList.remove("selected");
 	}
 	this.classList.add("selected");
-	channel.postMessage("Skin " + this.name);
+	port.postMessage({skin: localStorage.getItem("useskin")});
 }
 // Switch
 let enable = document.getElementById("enable");
@@ -42,5 +46,5 @@ enable.addEventListener("click", function () {
 		enabled.classList.remove("hidden");
 		disabled.classList.add("hidden");
 	}
-	channel.postMessage("Toggle");
+	port.postMessage({enabled: localStorage.getItem("enabled")});
 });
