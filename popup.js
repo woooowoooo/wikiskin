@@ -11,7 +11,7 @@ let channel = new BroadcastChannel("debug");
 for (let button of buttons) {
 	button.name = skinNames[button.id];
 	button.addEventListener("click", changeSkin);
-	if (localStorage.getItem("useskin") == button.name) {
+	if (localStorage.getItem("useskin") === button.name) {
 		button.classList.add("selected");
 	}
 };
@@ -27,13 +27,13 @@ function changeSkin() {
 let enable = document.getElementById("enable");
 let enabled = document.getElementById("enabled");
 let disabled = document.getElementById("disabled");
-if (localStorage.getItem("enabled") == "false") {
+if (localStorage.getItem("enabled") === "false") {
 	enable.checked = false;
 	enabled.classList.add("hidden");
 	disabled.classList.remove("hidden");
 }
 enable.addEventListener("click", function () {
-	if (localStorage.getItem("enabled") != "false") {
+	if (localStorage.getItem("enabled") !== "false") {
 		localStorage.setItem("enabled", "false");
 		enabled.classList.add("hidden");
 		disabled.classList.remove("hidden");
