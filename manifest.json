@@ -1,11 +1,14 @@
 {
 	"manifest_version": 2,
 	"name": "Wikiskin",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Choose a Wikimedia project skin without logging in!",
 	"icons": {
 		"48": "icons/wikiskin-48.png",
 		"96": "icons/wikiskin-96.png"
+	},
+	"background": {
+		"scripts": ["wikiskin.js"]
 	},
 	"browser_action": {
 		"default_icon": {
@@ -29,7 +32,7 @@
 			"*://*.wikivoyage.org/*"
 		],
 		"js": [
-			"wikiskin.js"
+			"action.js"
 		]
 	}]
 }
