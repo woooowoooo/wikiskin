@@ -1,5 +1,5 @@
-let buttons = document.getElementsByTagName("button");
-let skinNames = {
+const buttons = document.getElementsByTagName("button");
+const skinNames = {
 	vr: "vector",
 	tl: "timeless",
 	mn: "mobile",
@@ -22,9 +22,9 @@ function changeSkin() {
 	this.classList.add("selected");
 }
 // Switch
-let enable = document.getElementById("enable");
-let enabled = document.getElementById("enabled");
-let disabled = document.getElementById("disabled");
+const enable = document.getElementById("enable");
+const enabled = document.getElementById("enabled");
+const disabled = document.getElementById("disabled");
 if (localStorage.getItem("enabled") === "false") {
 	enable.checked = false;
 	enabled.classList.add("hidden");

@@ -1,8 +1,8 @@
-let port = browser.runtime.connect({name: "events"});
+const port = browser.runtime.connect({name: "events"});
 function changeSkin() {
 	console.log("Changing skin to " + skin);
-	let searchParams = new URLSearchParams(window.location.search);
 	if (searchParams.get("useskin") !== skin) {
+	const searchParams = new URLSearchParams(location.search);
 		searchParams.set("useskin", skin);
 		window.location.replace(window.location.pathname + "?" + searchParams.toString());
 	}
