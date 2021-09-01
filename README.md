@@ -1,2 +1,2 @@
 # Wikiskin
-A small extension (for firefox) to use skins on Wikipedia without logging in.
+A small extension (for Firefox) that lets you use skins on Wikimedia projects without logging in.
