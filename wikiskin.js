@@ -1,13 +1,13 @@
-let skin = "timeless";
-let enabled = true;
+localStorage.setItem("useskin", "timeless");
+localStorage.setItem("enabled", "true");
+function postStorage() {
+	port.postMessage({skin: localStorage.getItem("useskin")});
+	port.postMessage({enabled: localStorage.getItem("enabled")});
+}
 let port;
 browser.runtime.onConnect.addListener(function (p) {
 	port = p;
 	console.log("Port made");
-	port.postMessage({skin: localStorage.getItem("useskin")});
-	port.postMessage({enabled: localStorage.getItem("enabled")});
+	postStorage();
 });
-addEventListener("storage", function () {
-	port.postMessage({skin: localStorage.getItem("useskin")});
-	port.postMessage({enabled: localStorage.getItem("enabled")});
-});
+addEventListener("storage", postStorage);
