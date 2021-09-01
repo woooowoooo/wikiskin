@@ -18,6 +18,19 @@
 		"default_popup": "popup.html"
 	},
 	"content_scripts": [{
+		"exclude_matches": [
+			"*://www.wikimedia.org/*",
+			"*://www.wikipedia.org/*",
+			"*://www.wiktionary.org/*",
+			"*://www.wikiquote.org/*",
+			"*://www.wikibooks.org/*",
+			"*://www.wikisource.org/*",
+			"*://www.wikinews.org/*",
+			"*://www.wikiversity.org/*",
+			"*://www.mediawiki.org/*",
+			"*://www.wikidata.org/*",
+			"*://www.wikivoyage.org/*"
+		],
 		"matches": [
 			"*://*.wikimedia.org/*",
 			"*://*.wikipedia.org/*",
