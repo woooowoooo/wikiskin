@@ -1,13 +1,14 @@
 localStorage.setItem("useskin", "timeless");
 localStorage.setItem("enabled", "true");
-function postStorage() {
-	port.postMessage({skin: localStorage.getItem("useskin")});
-	port.postMessage({enabled: localStorage.getItem("enabled")});
+function postSkin() {
+	if (localStorage.getItem("enabled") === "true") {
+		port.postMessage({skin: localStorage.getItem("useskin")});
+	}
 }
 let port;
 browser.runtime.onConnect.addListener(function (p) {
 	port = p;
-	console.log("Port made");
-	postStorage();
+	console.log("action.js ⇄ wikiskin.js port created");
+	postSkin();
 });
-addEventListener("storage", postStorage);
+addEventListener("storage", postSkin);
