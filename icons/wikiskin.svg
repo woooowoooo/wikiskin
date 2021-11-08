@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="96"
+   height="96"
+   viewBox="0 0 96 96"
+   version="1.2"
+   id="SVGRoot"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="template">Wikiskin Logo</title>
+  <defs
+     id="defs" />
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Wikiskin Logo</dc:title>
+        <dc:date>2021-11-07</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>woooowoooo</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Logo is a crossed W in the font "Linux Libertine", similar to Wikipedia's wordmark.</dc:description>
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="color:#000000;-inkscape-font-specification:'Linux Libertine O, Normal';fill:#e50000;fill-opacity:1;-inkscape-stroke:none"
+     d="m 53.313325,25.315999 c 3.669332,0.512 3.327999,2.389332 0.682666,7.338664 l -4.522664,8.533329 -4.608002,7.167997 -9.471996,19.370659 H 34.966666 L 19.350672,32.142663 c -2.133332,-4.863998 -1.877332,-6.229331 3.498666,-6.826664 0.511999,-0.512 0.511999,-2.303999 0,-2.815999 -3.413332,0.08533 -6.911997,0.170667 -9.471996,0.170667 -2.901333,0 -5.887998,-0.08533 -8.8746634,-0.170667 -0.5119998,0.512 -0.4266665,2.303999 0.085333,2.815999 4.3519982,0.341333 5.0346646,1.706666 7.5946634,7.76533 l 18.602659,43.690648 c 0.512,1.28 1.109333,1.962666 1.962666,1.962666 0.938666,0 1.536,-0.682666 2.047999,-1.962666 L 47.339994,52.025321 51.606659,45.198657 57.83599,33.251996 c 2.133332,-4.010665 4.010665,-7.253331 8.447996,-7.935997 0.512,-0.512 0.512,-2.303999 0,-2.815999 -2.133332,0.08533 -4.266665,0.170667 -6.229331,0.170667 -1.962665,0 -4.437331,-0.08533 -6.74133,-0.170667 -0.512,0.512 -0.512,2.303999 0,2.815999 z"
+     id="libleft" />
+  <path
+     style="color:#000000;-inkscape-font-specification:'Linux Libertine O, Normal';fill:#0000e5;fill-opacity:1;-inkscape-stroke:none"
+     d="m 44.865328,32.142663 c -2.303999,-4.863998 -2.645332,-6.314664 0.938667,-6.826664 0.512,-0.512 0.512,-2.303999 0,-2.815999 -2.474666,0.08533 -5.119998,0.170667 -7.76533,0.170667 -2.559999,0 -5.119998,-0.08533 -7.594664,-0.170667 -0.512,0.512 -0.426666,2.303999 0.08533,2.815999 3.669332,0.512 4.351999,1.706666 7.167997,7.76533 l 21.162661,43.690648 c 0.426667,1.28 1.109333,1.962666 1.962666,1.962666 0.938666,0 1.450666,-0.682666 2.047999,-1.962666 L 83.009313,33.251996 c 1.877332,-4.010665 3.583998,-7.423997 8.447996,-7.935997 0.512,-0.512 0.512,-2.303999 0,-2.815999 -2.730666,0.08533 -5.546664,0.170667 -7.50933,0.170667 -1.962666,0 -5.290665,-0.08533 -8.447997,-0.170667 -0.511999,0.512 -0.511999,2.303999 0,2.815999 5.546665,0.426666 5.631998,2.730665 3.669332,7.338664 L 62.955988,67.726648 h -0.426667 z"
+     id="libright" />
+</svg>

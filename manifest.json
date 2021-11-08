@@ -4,15 +4,15 @@
 	"version": "0.0.4",
 	"description": "Choose a Wikimedia project skin without logging in!",
 	"icons": {
-		"48": "icons/wikiskin-48.png",
-		"96": "icons/wikiskin-96.png"
+		"48": "icons/wikiskin.svg",
+		"96": "icons/wikiskin.svg"
 	},
 	"background": {
 		"scripts": ["wikiskin.js"]
 	},
 	"browser_action": {
 		"default_icon": {
-			"48": "icons/wikiskin-48.png"
+			"48": "icons/wikiskin.svg"
 		},
 		"default_title": "Wikiskin",
 		"default_popup": "popup.html"
