@@ -1,12 +1,18 @@
 * {
 	box-sizing: border-box;
 }
+:root {
+	--font: Avenir, "Century Gothic", "URW Gothic", sans-serif;
+	--background: white;
+	--button: lightgray;
+	--accent: orangered;
+}
 body {
-	background-color: white;
+	background-color: var(--background);
 	width: 500px;
 	height: 360px;
 	padding: 0 10px;
-	font-family: Century Gothic, AppleGothic, sans-serif;
+	font-family: var(--font);
 }
 #buttons {
 	display: flex;
@@ -14,19 +20,19 @@ body {
 	flex-wrap: wrap;
 }
 button {
-	background-color: lightgray;
+	background-color: var(--button);
 	width: 9em;
 	padding: 0.75em;
 	border: none;
 	border-radius: 5px;
 	margin: 0.5em 0.2em;
-	font: 1em Century Gothic, AppleGothic, sans-serif;
+	font: 1em var(--font);
 	transition-duration: 50ms;
 	cursor: pointer;
 }
 .selected {
-	background-color: orangered;
-	color: white;
+	background-color: var(--accent);
+	color: var(--background);
 }
 h1 {
 	text-align: center;
@@ -51,7 +57,7 @@ body > p:last-of-type {
 	display: none;
 }
 .slider {
-	background-color: lightgray;
+	background-color: var(--button);
 	width: 48px;
 	height: 24px;
 	padding: 3px;
@@ -64,14 +70,14 @@ body > p:last-of-type {
 .slider:before {
 	content: "";
 	display: inline-block;
-	background-color: white;
+	background-color: var(--background);
 	width: 18px;
 	height: 18px;
 	border-radius: 9px;
 	transition-duration: 0.5s;
 }
 input:checked + .slider {
-	background-color: orangered;
+	background-color: var(--accent);
 }
 input:checked + .slider:before {
 	transform: translateX(24px);
